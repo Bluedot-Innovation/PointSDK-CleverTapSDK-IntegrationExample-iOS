@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS-frameworks.sh
+${PODS_ROOT}/BluedotPointSDK/PointSDK/BDPointSDK.framework
+${BUILT_PRODUCTS_DIR}/CleverTap-iOS-SDK/CleverTapSDK.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
