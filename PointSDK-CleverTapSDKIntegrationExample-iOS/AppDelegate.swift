@@ -15,9 +15,7 @@ import CleverTapSDK
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-    let CleverTapApiKey = "51182989-e6b0-48da-9734-dd527c1b3c22"
-
-
+    
     func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?

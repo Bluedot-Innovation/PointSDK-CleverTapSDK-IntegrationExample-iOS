@@ -10,7 +10,7 @@ import UIKit
 import UserNotifications
 import BDPointSDK
 
-let bluedotApiKey = "51182989-e6b0-48da-9734-dd527c1b3c22"
+let bluedotApiKey = "Your API key"; //API key for the Point Demo App
 
 class ViewController: UIViewController {
     @IBOutlet weak var authenticateButton: UIButton!
