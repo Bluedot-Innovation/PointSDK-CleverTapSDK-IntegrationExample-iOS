@@ -103,12 +103,8 @@ import CleverTapSDK
 
 2. Add CleverTap credentials to associate your iOS app with your CleverTap account, you will need to add your CleverTap credentials in the Info.plist file in your application. For further information refer to [CleverTap Developer Documentation](https://developer.clevertap.com/docs/ios-quickstart-guide)
 
-Navigate to the Info.plist file in your project navigator.
-
-First, create a key called CleverTapAccountID with type string.
-Second, create a key called CleverTapToken with type string.
-
-Insert the Account ID and Account Token values from your CleverTap account.
+    Navigate to the Info.plist file in your project navigator. First, create a key called CleverTapAccountID with type string.
+    Second, create a key called CleverTapToken with type string. Insert the Account ID and Account Token values from your CleverTap account.
 
 3. Import CleverTapSDK to your AppDelegate.swift file.
 
