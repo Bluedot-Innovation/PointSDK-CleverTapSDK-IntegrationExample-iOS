@@ -1,9 +1,9 @@
 # CleverTap Custom Event Example
 
-A sample project used to test the integration between CleverTap Appboy SDK and Bluedot Point SDK.
+A sample project used to test the integration between CleverTap SDK and Bluedot Point SDK.
 ## Getting Started
 
-This project depends on `BluedotPointSDK` and `Appboy-iOS-SDK`. Both dependencies ban be managed by [CocoaPods](https://cocoapods.org/). Please refer to the `Podfile` in the repository.
+This project depends on `BluedotPointSDK` and `CleverTap-iOS-SDK`. Both dependencies ban be managed by [CocoaPods](https://cocoapods.org/). Please refer to the `Podfile` in the repository.
 
 ### Implement `BluedotPointSDK`
 
@@ -89,45 +89,55 @@ BDLocationManager.instance()?.locationDelegate = instanceOfYourClass
 BDLocationManager.instance()?.authenticate(withApiKey: "Your assigned Bluedot API Key", requestAuthorization: .authorizedAlways)
 ```
 
-### Implement `CleverTap Appboy SDK`
+### Implement `CleverTap SDK`
 
-1. Import `Appboy-iOS-SDK` to your class
+1. To use the CleverTap iOS SDK, add the CleverTap SDK to your Podfile as shown below.
+```
+pod "CleverTap-iOS-SDK"
+```
 
 **Swift**
 ```swift
-import Appboy_iOS_SDK
+import CleverTapSDK
 ```
 
-2. Start `Appboy-iOS-SDK` within the `application:didFinishLaunchingWithOptions` method. 
-For further information refer to [CleverTap Developer Documentation](https://www.CleverTap.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/)
+2. Add CleverTap credentials to associate your iOS app with your CleverTap account, you will need to add your CleverTap credentials in the Info.plist file in your application. For further information refer to [CleverTap Developer Documentation](https://developer.clevertap.com/docs/ios-quickstart-guide)
+
+Navigate to the Info.plist file in your project navigator.
+
+First, create a key called CleverTapAccountID with type string.
+Second, create a key called CleverTapToken with type string.
+
+Insert the Account ID and Account Token values from your CleverTap account.
+
+3. Import CleverTapSDK to your AppDelegate.swift file.
 
 **Swift**
 ```swift
-Appboy.start(withApiKey: "Your assigned CleverTap API Key", in: application, withLaunchOptions: launchOptions)
+func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject:AnyObject]?) -> Bool {
+    ...
+    CleverTap.autoIntegrate()
+    ...
+}
 ```
 
-3. Track `CleverTap` custom events in your Bluedot Entry / Exit events.
+4. Track `CleverTap` custom events in your Bluedot Entry events.
 
 ```swift
 func didCheck(
     intoFence fence: BDFenceInfo!,
-    inZone zoneInfo: BDZoneInfo!,
-    atLocation location: BDLocationInfo!,
-    willCheckOut: Bool,
-    withCustomData customData: [AnyHashable : Any]!
+        inZone zoneInfo: BDZoneInfo!,
+        atLocation location: BDLocationInfo!,
+        willCheckOut: Bool,
+        withCustomData customData: [AnyHashable : Any]!
 ){
     // Name the custom event 
     let customEventName = "bluedot_entry"
 
     // Map the Location and Bluedot Zone attributes into a properties dictionary
     var properties = [
-        "zone_id": "\(zoneInfo.id!)",
-        "zone_name": "\(zoneInfo.name!)",
-        "latitude": "\(location.latitude)",
-        "longitude": "\(location.longitude)",
-        "speed": "\(location.speed)",
-        "bearing": "\(location.bearing)",
-        "timestamp": "\(location.timestamp!)",
+        "bluedot_zone_id": "\(zoneInfo.id!)",
+        "bluedot_zone_name": "\(zoneInfo.name!)"
     ]
 
     // Map the Custom Data attributes into properties
@@ -135,37 +145,11 @@ func didCheck(
         customData.forEach { data in properties["\(data.key)"] = "\(data.value)"}
     }
 
-    // Log the Custom Event in Appboy
-    Appboy.sharedInstance()?.logCustomEvent(customEventName, withProperties: properties );
+    // Log the Custom Event in CleverTap
+    CleverTap.sharedInstance()?.recordEvent(customEventName, withProps: properties)
 }
 
-func didCheckOut(
-    fromFence fence: BDFenceInfo!,
-    inZone zoneInfo: BDZoneInfo!,
-    on date: Date!,
-    withDuration checkedInDuration: UInt,
-    withCustomData customData: [AnyHashable : Any]!
-) {
-     // Name the custom event
-    let customEventName = "bluedot_exit"
-    
-    // Map the Zone attributes into a properties dictionary
-    var properties = [
-        "zone_id": "\(zoneInfo.id!)",
-        "zone_name": "\(zoneInfo.name!)",
-        "timestamp": "\(date!)",
-        "checkedInDuration": "\(checkedInDuration)"
-    ]
-    
-    // Map the Custom Data attributes into properties
-    if customData != nil && !customData.isEmpty {
-        customData.forEach { data in properties["\(data.key)"] = "\(data.value)"}
-    }
-
-    // Log the Custom Event in Appboy
-    Appboy.sharedInstance()?.logCustomEvent(customEventName, withProperties: properties );
-}
 ```
 
 ## Next steps
-Full documentation can be found at https://docs.bluedot.io/ios-sdk/ and https://www.CleverTap.com/docs/developer_guide/platform_integration_guides/ios/initial_sdk_setup/initial_sdk_setup/ respectivelly.
+Full documentation can be found at https://docs.bluedot.io/ios-sdk/ and https://developer.clevertap.com/docs/ios-quickstart-guide respectivelly.

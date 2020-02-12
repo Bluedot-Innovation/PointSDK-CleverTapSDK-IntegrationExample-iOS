@@ -6,11 +6,6 @@
 	<string>TEST-643-0a3</string>
 	<key>CleverTapAccountID</key>
 	<string>TEST-K7W-K46-RZ5Z</string>
-	<key>Appboy</key>
-	<dict>
-		<key>Endpoint</key>
-		<string>sdk.iad-03.CleverTap.com</string>
-	</dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is used by the app to get you deals closer to you while in use</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
