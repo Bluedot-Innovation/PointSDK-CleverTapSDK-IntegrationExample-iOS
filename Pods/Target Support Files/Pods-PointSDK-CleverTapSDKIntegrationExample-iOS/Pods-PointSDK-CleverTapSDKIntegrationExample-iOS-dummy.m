@@ -1,5 +1,0 @@
-#import <Foundation/Foundation.h>
-@interface PodsDummy_Pods_PointSDK_CleverTapSDKIntegrationExample_iOS : NSObject
-@end
-@implementation PodsDummy_Pods_PointSDK_CleverTapSDKIntegrationExample_iOS
-@end

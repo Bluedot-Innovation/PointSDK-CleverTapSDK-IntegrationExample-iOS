@@ -15,12 +15,11 @@ extension AppDelegate: BDPLocationDelegate {
         print("Zone information has been recieved")
     }
     
-    func didCheck(
-        intoFence fence: BDFenceInfo!,
-        inZone zoneInfo: BDZoneInfo!,
-        atLocation location: BDLocationInfo!,
-        willCheckOut: Bool,
-        withCustomData customData: [AnyHashable : Any]!
+    func didCheck(intoFence fence: BDFenceInfo!,
+                  inZone zoneInfo: BDZoneInfo!,
+                  atLocation location: BDLocationInfo!,
+                  willCheckOut: Bool,
+                  withCustomData customData: [AnyHashable : Any]!
     ) {
         
         // Name the custom event
@@ -41,12 +40,11 @@ extension AppDelegate: BDPLocationDelegate {
         CleverTap.sharedInstance()?.recordEvent(customEventName, withProps: properties)
     }
     
-    func didCheckOut(
-        fromFence fence: BDFenceInfo!,
-        inZone zoneInfo: BDZoneInfo!,
-        on date: Date!,
-        withDuration checkedInDuration: UInt,
-        withCustomData customData: [AnyHashable : Any]!
+    func didCheckOut(fromFence fence: BDFenceInfo!,
+                     inZone zoneInfo: BDZoneInfo!,
+                     on date: Date!,
+                     withDuration checkedInDuration: UInt,
+                     withCustomData customData: [AnyHashable : Any]!
     ) {
         
     }
