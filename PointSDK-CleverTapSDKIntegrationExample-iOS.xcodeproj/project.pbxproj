@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E16C3C6963F3F9452D972FA /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74296D198F6A641F953F25A2 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework */; };
 		6504063322E5864400A5492F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504063222E5864400A5492F /* AppDelegate.swift */; };
 		6504063522E5864400A5492F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504063422E5864400A5492F /* ViewController.swift */; };
 		6504063822E5864400A5492F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6504063622E5864400A5492F /* Main.storyboard */; };
@@ -20,11 +19,10 @@
 		6504064F22E591EF00A5492F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6504064E22E591EF00A5492F /* UIKit.framework */; };
 		65C18D0422E6CD6300119F5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65C18D0322E6CD6300119F5C /* Assets.xcassets */; };
 		65DD437F22E690DE00FB078D /* AppDelegate+LocationDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DD437E22E690DE00FB078D /* AppDelegate+LocationDelegate.swift */; };
+		BA724110C6F6643EB8EDAEE1 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C86532F9AFF6198558EF17 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		26A0292889650816ABEFC2CD /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig"; path = "Target Support Files/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
-		48DE58DB21B34256B8A2190D /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig"; path = "Target Support Files/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		6504062F22E5864400A5492F /* PointSDK-CleverTapSDKIntegrationExample-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PointSDK-CleverTapSDKIntegrationExample-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6504063222E5864400A5492F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6504063422E5864400A5492F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -39,8 +37,10 @@
 		6504064E22E591EF00A5492F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		65C18D0322E6CD6300119F5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65DD437E22E690DE00FB078D /* AppDelegate+LocationDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+LocationDelegate.swift"; sourceTree = "<group>"; };
-		74296D198F6A641F953F25A2 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80C86532F9AFF6198558EF17 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBA256823F2797300041ABC /* PointSDK-CleverTapSDKIntegrationExample-iOS.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "PointSDK-CleverTapSDKIntegrationExample-iOS.entitlements"; sourceTree = "<group>"; };
+		C37DEFA49AF56E260E97C6F7 /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig"; path = "Target Support Files/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		D6D00D3129BB450FB537699E /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig"; path = "Target Support Files/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS/Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,7 @@
 				6504064922E591C900A5492F /* SystemConfiguration.framework in Frameworks */,
 				6504064722E591B400A5492F /* CoreMotion.framework in Frameworks */,
 				6504064522E591A700A5492F /* CoreLocation.framework in Frameworks */,
-				1E16C3C6963F3F9452D972FA /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework in Frameworks */,
+				BA724110C6F6643EB8EDAEE1 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +70,7 @@
 				6504064822E591C900A5492F /* SystemConfiguration.framework */,
 				6504064622E591B400A5492F /* CoreMotion.framework */,
 				6504064422E591A700A5492F /* CoreLocation.framework */,
-				74296D198F6A641F953F25A2 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework */,
+				80C86532F9AFF6198558EF17 /* Pods_PointSDK_CleverTapSDKIntegrationExample_iOS.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,8 +111,8 @@
 		662B060F4236E20AF6E36A72 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				48DE58DB21B34256B8A2190D /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig */,
-				26A0292889650816ABEFC2CD /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */,
+				C37DEFA49AF56E260E97C6F7 /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig */,
+				D6D00D3129BB450FB537699E /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -124,11 +124,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6504064122E5864600A5492F /* Build configuration list for PBXNativeTarget "PointSDK-CleverTapSDKIntegrationExample-iOS" */;
 			buildPhases = (
-				3BD9096903D599B842DEAB61 /* [CP] Check Pods Manifest.lock */,
+				22B14D4EABC1BF2ACE692239 /* [CP] Check Pods Manifest.lock */,
 				6504062B22E5864400A5492F /* Sources */,
 				6504062C22E5864400A5492F /* Frameworks */,
 				6504062D22E5864400A5492F /* Resources */,
-				5C58D7634000DC980C399B1E /* [CP] Embed Pods Frameworks */,
+				F8D678B77CF02990D6F58803 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -191,7 +191,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3BD9096903D599B842DEAB61 /* [CP] Check Pods Manifest.lock */ = {
+		22B14D4EABC1BF2ACE692239 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -213,7 +213,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C58D7634000DC980C399B1E /* [CP] Embed Pods Frameworks */ = {
+		F8D678B77CF02990D6F58803 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -328,7 +328,6 @@
 		};
 		6504064022E5864600A5492F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26A0292889650816ABEFC2CD /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -384,7 +383,7 @@
 		};
 		6504064222E5864600A5492F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 48DE58DB21B34256B8A2190D /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig */;
+			baseConfigurationReference = C37DEFA49AF56E260E97C6F7 /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -406,7 +405,7 @@
 		};
 		6504064322E5864600A5492F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26A0292889650816ABEFC2CD /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */;
+			baseConfigurationReference = D6D00D3129BB450FB537699E /* Pods-PointSDK-CleverTapSDKIntegrationExample-iOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
