@@ -1,10 +1,10 @@
 PODS:
-  - BluedotPointSDK (15.2.0)
-  - CleverTap-iOS-SDK (3.7.3):
+  - BluedotPointSDK (15.4.1)
+  - CleverTap-iOS-SDK (3.9.2):
     - SDWebImage (~> 5.1)
-  - SDWebImage (5.7.0):
-    - SDWebImage/Core (= 5.7.0)
-  - SDWebImage/Core (5.7.0)
+  - SDWebImage (5.10.4):
+    - SDWebImage/Core (= 5.10.4)
+  - SDWebImage/Core (5.10.4)
 
 DEPENDENCIES:
   - BluedotPointSDK
@@ -17,10 +17,10 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  BluedotPointSDK: 1004bd071101dfe72ead61ce89612755e974512a
-  CleverTap-iOS-SDK: a371ba586348ffdb6bb47fcba556e8490f616434
-  SDWebImage: a99471f452bdfa0ca52ddf5b1adf2b61cab1d1eb
+  BluedotPointSDK: e6afdbe1c4a01d867d6533e1a84c9d03f213cba2
+  CleverTap-iOS-SDK: 348167628e6bf8f784b003b15abc0c872d346a55
+  SDWebImage: c666b97e1fa9c64b4909816a903322018f0a9c84
 
 PODFILE CHECKSUM: 3c45d2e4bafebb703c5548c1adb2723652b9ea7a
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.10.1
