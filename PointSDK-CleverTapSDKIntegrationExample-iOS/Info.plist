@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CleverTapToken</key>
-	<string>CleverTapToken</string>
+	<string>YourCleverTapToken</string>
 	<key>CleverTapAccountID</key>
-	<string>CleverTapAccountID</string>
+	<string>YourCleverTapAccountId</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>Your location is used by the app to get you deals closer to you while in use</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>

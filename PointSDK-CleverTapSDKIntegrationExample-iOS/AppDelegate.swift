@@ -15,76 +15,22 @@ import CleverTapSDK
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
 
     var window: UIWindow?
-    
-    func application(
-        _ application: UIApplication,
-        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+      
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
         
         // Initiates BDLocationManager
-        BDLocationManager.instance()?.locationDelegate = self
+        BDLocationManager.instance()?.geoTriggeringEventDelegate = self
         
-        // Register for Push Notifications
-        let center = UNUserNotificationCenter.current()
-        center.delegate = self
-        var options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        if #available(iOS 12.0, *) {
-            options = UNAuthorizationOptions(rawValue: options.rawValue | UNAuthorizationOptions.provisional.rawValue)
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound]) {(accepted, error) in
+            if !accepted {
+                print("Notification access denied.")
+            }
         }
-        center.requestAuthorization(options: options) { (granted, error) in
-            
-        }
-        
-        UIApplication.shared.registerForRemoteNotifications()
         
         CleverTap.autoIntegrate()
         
         return true
-    }
-    
-    
-    func application(
-        _ application: UIApplication,
-        didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
-    ) {
-        
-    }
-    
-    func application(
-        _ application: UIApplication,
-        didFailToRegisterForRemoteNotificationsWithError error: Error
-    ) {
-        print("Failed to regster: \(error)")
-    }
-    
-    
-    func application(
-        _ application: UIApplication,
-        didReceiveRemoteNotification userInfo: [AnyHashable: Any],
-        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
-    ) {
-        // Enable Push Notifications Handling
-        
-    }
-    
-    // Background notification
-    func userNotificationCenter(
-        _ center: UNUserNotificationCenter,
-        didReceive response: UNNotificationResponse,
-        withCompletionHandler completionHandler: @escaping () -> Void
-        ) {
-        
-    }
-    
-    
-    // Allow foreground notifications
-    func userNotificationCenter(
-        _ center: UNUserNotificationCenter,
-        willPresent notification: UNNotification,
-        withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void
-        ) {
-        
-        completionHandler([.alert, .badge, .sound])
     }
 }
 

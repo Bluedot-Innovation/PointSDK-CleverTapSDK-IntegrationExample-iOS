@@ -10,30 +10,51 @@ import UIKit
 import UserNotifications
 import BDPointSDK
 
-let bluedotApiKey = "Your API key"; //API key for the Point Demo App
+let projectId = "YourProjectId";
 
 class ViewController: UIViewController {
-    @IBOutlet weak var authenticateButton: UIButton!
+    @IBOutlet weak var initializeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Initiates connection with Bluedot
-        BDLocationManager.instance()?.sessionDelegate = self
-        
+        BDLocationManager.instance()?.requestWhenInUseAuthorization()
     }
     
-    @IBAction func authenticatePointSDK(_ sender: UIButton) {
-       
-        switch BDLocationManager.instance()!.authenticationState {
-        case .authenticated:
-            BDLocationManager.instance()?.logOut()
+    @IBAction func startGeoTriggering(_ sender: UIButton) {
+        BDLocationManager.instance()?.startGeoTriggering() { error in
+            guard error == nil else {
+                self.showAlert(title: "Start Geotriggering error", message: error!.localizedDescription)
+                return
+            }
             
-        case .notAuthenticated:
-            BDLocationManager.instance()?.authenticate(withApiKey: bluedotApiKey, requestAuthorization: .authorizedAlways)
+            print("Geotriggering Started")
+        }
+    }
+    
+    @IBAction func stopGeoTriggering(_ sender: UIButton) {
+        BDLocationManager.instance()?.stopGeoTriggering() { error in
+            guard error == nil else {
+                self.showAlert(title: "Stop Geotriggering error", message: error!.localizedDescription)
+                return
+            }
+            
+            print("Geotriggering Stopped")
+        }
+    }
+    
+    @IBAction func initializePointSDK(_ sender: UIButton) {
         
-        default:
-            return
+        if BDLocationManager.instance()?.isInitialized() == false {
+            BDLocationManager.instance()?.initialize(withProjectId: projectId) {
+                error in
+                guard error == nil else {
+                    self.showAlert(title: "SDK Initialization error",  message: error!.localizedDescription)
+                    return
+                }
+                 
+                print("SDK Initialized")
+                BDLocationManager.instance()?.requestAlwaysAuthorization()
+            }
         }
     }
     
@@ -41,34 +62,5 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
         self.present(alert, animated: true, completion: nil)
-    }
-}
-
-extension ViewController: BDPointDelegate {
-    func willAuthenticate(withApiKey apiKey: String!) {
-         print( "Authenticating with Point sdk" )
-    }
-    
-    func authenticationWasSuccessful() {
-        print( "Authenticated successfully with Point sdk" )
-        authenticateButton.setTitle("Logout", for: .normal)
-    }
-    
-    func authenticationWasDenied(withReason reason: String!) {
-        print("Authentication with Point sdk denied, with reason: \(reason!)")
-        authenticateButton.setTitle("Authenticate", for: .normal)
-    }
-    
-    func authenticationFailedWithError(_ error: Error!) {
-        print( "Authentication with Point sdk failed, with reason: \(error.localizedDescription)" )
-        authenticateButton.setTitle("Authenticate", for: .normal)
-    }
-    
-    func didEndSession() {
-        authenticateButton.setTitle("Authenticate", for: .normal)
-    }
-    
-    func didEndSessionWithError(_ error: Error!) {
-        authenticateButton.setTitle("Authenticate", for: .normal)
     }
 }
